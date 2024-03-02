@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-Trailers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body onload="loadLogged(loggedIn)">
+    <section id="header">
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="upload.html">Upload</a></li>
+        </ul>
+        <a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+        <ul class="navbar">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="profile.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+              </svg></a></li>
+        </ul>
+    </section>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Your Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" id="up-name" placeholder="Name">
+                <input type="email" id="up-email" placeholder="Email">
+                <input type="password" id="up-password" placeholder="Password">
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form id="sign-in-form">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email</span>
+                <input type="email" name="email" id="in-email" placeholder="Email">
+                <input type="password" name="password" id="in-password" placeholder="Password">
+                <p id="sign-in-error-msg">Invalid username and/or password</p>
+                <a href="#">Forgot your password?</a>
+                <input type="submit" value="Sign In" id="sign-in-btn">
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome back!</h1>
+                    <p>Enter your personal details to use all of the features Re-trailer offers</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Ready to start a new journey?</h1>
+                    <p>Register with your personal details to use all of the features Re-trailer offers</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile-container">
+        <div id="profile">
+            <ul id="acc-links">
+                <li><a onclick="accDetails()">Account details</a></li>
+                <li><a onclick="privacy()">Privacy</a></li>
+                <li><a onclick="subscription()">Subscription</a></li>
+                <li><a onclick="payDetails()">Payment details</a></li>
+                <li><a onclick="logOut()">Log out</a></li>
+            </ul>
+            <div id="details">
+                <div id="acc-details">
+                    <h5>Email: </h5>
+                    <h5>Business: </h5>
+                    <h5>Address: </h5>
+                </div>
+    
+                <div id="privacy">
+                    <h5>PRIVACY</h5>
+                </div>
+    
+                <div id="subscription">
+                    <h5>SUBSCRIPTION</h5>
+                </div>
+    
+                <div id="pay-details">
+                    <h5>PAY DETAILS</h5>
+                </div>
+    
+                <div id="log-out">
+                    <h5>LOG OUT</h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="img/logo.png" class="logo" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Address Address Address Address Address Address Address</p>
+            <p><strong>Phone:</strong> Phone  Phone </p>
+            <p><strong>Hours:</strong> Hours Hours Hours Hours Hours Hours </p>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">My Orders</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Subscription</a>
+            <a href="#">My Account</a>
+        </div>
+
+        <div class="col install">
+            <h4>App Coming Soon!</h4>
+            <p>To App Store and Google Play</p>
+            <div class="row">
+                <img src="img/app.png" class="logo" alt="">
+                <img src="img/play.png" class="logo" alt="">
+            </div>
+            <p>Secured Payment Methods</p>
+            <img src="img/pay.jpeg" class="sec-pay" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>@2023 Re-trailer</p>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html> 
